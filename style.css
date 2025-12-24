@@ -1,0 +1,143 @@
+*{box-sizing:border-box;font-family:Arial}
+
+body{margin:0;background:#f5f6f8}
+
+/* HEADER */
+header{
+  background:#2ecc71;
+  color:#fff;
+  padding:15px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-weight:bold;
+}
+
+.menu-btn span{
+  display:block;
+  width:30px;
+  height:3px;
+  background:#fff;
+  margin:5px 0;
+}
+
+/* MENU */
+#sideMenu{
+  position:fixed;
+  right:-250px;
+  top:0;
+  width:250px;
+  height:100%;
+  background:#fff;
+  padding:20px;
+  transition:.3s;
+  z-index:10;
+}
+#sideMenu a{
+  display:block;
+  margin:15px 0;
+  text-decoration:none;
+  color:#333;
+  font-weight:bold;
+}
+#overlay{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.4);
+  z-index:9;
+}
+
+/* HOME */
+#home{
+  height:calc(100vh - 70px);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+.dua{
+  font-size:20px;
+  margin-bottom:15px;
+}
+#home button{
+  padding:15px 40px;
+  border:none;
+  background:#2ecc71;
+  color:#fff;
+  font-size:18px;
+  border-radius:30px;
+}
+
+/* QUIZ */
+#quiz{display:none}
+.card{
+  margin:40px auto;
+  background:#fff;
+  width:90%;
+  max-width:500px;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,.1);
+  text-align:center;
+}
+
+#questionsBtn{
+  background:#3498db;
+  color:#fff;
+  border:none;
+  padding:12px 35px;
+  border-radius:25px;
+  margin:15px auto 25px;
+}
+
+#questionText{margin:30px 0;font-size:20px}
+
+.options{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+.options button{
+  padding:15px;
+  border:none;
+  border-radius:30px;
+  background:#3498db;
+  color:#fff;
+  font-size:16px;
+}
+
+#nextBtn,#retryBtn{
+  margin-top:20px;
+  padding:12px 35px;
+  border:none;
+  border-radius:25px;
+  display:none;
+  color:#fff;
+}
+#nextBtn{background:#3498db}   /* نفس لون True/False */
+#retryBtn{background:#f39c12}
+
+/* QUESTIONS LIST */
+#questionsList{display:none;margin-bottom:15px}
+.q-item{
+  display:inline-block;
+  width:30px;
+  height:30px;
+  line-height:30px;
+  border-radius:50%;
+  color:#fff;
+  margin:5px;
+  cursor:pointer;
+}
+.correct{background:#27ae60}
+.wrong{background:#e74c3c}
+.unanswered{background:#bdc3c7}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  font-size:12px;
+  color:#888;
+  margin-bottom:10px;
+}
